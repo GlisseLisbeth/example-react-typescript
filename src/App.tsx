@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface HelloProps {
+  name?: string;
+}
+function Hello({name}: HelloProps) {
+  return <div>Hello {name}</div>
+}
+
 class App extends Component {
   render() {
     return (
@@ -11,6 +18,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
+          <Hello/>
           <a
             className="App-link"
             href="https://reactjs.org"
